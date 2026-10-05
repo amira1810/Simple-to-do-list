@@ -1,33 +1,207 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 10px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
-img{
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-}
+.to-do-app {
+    width: 100%;
+    max-width: 540px;
 
-.to-do-app{
-    width: 400px;
     background: #fff;
+
+    padding: 40px 30px 40px;
+
     border-radius: 10px;
-    padding: 30px 40px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do-app h2 {
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.to-do-app h2 img {
+    margin-left: 10px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 10px;
+}
+
+/* Input + Button */
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #edeef0;
+
+    border-radius: 30px;
+
+    padding-left: 20px;
+
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 10px;
+
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+
+    padding: 16px 30px;
+
+    background: #7124a9;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    border-radius: 40px;
+}
+
+/* Tasks */
+
+ul {
+    margin-top: 10px;
+}
+
+ul li {
+    list-style: none;
+
+    font-size: 18px;
+
+    user-select: none;
+
+    cursor: pointer;
+
+    position: relative;
+
+    padding: 12px 40px 12px 50px;
+
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Cercle devant chaque tâche */
+
+ul li::before {
+    content: '';
+
+    position: absolute;
+
+    height: 28px;
+    width: 28px;
+
+    border-radius: 50%;
+
+    border: 2px solid #7124a9;
+
+    top: 50%;
+    left: 8px;
+
+    transform: translateY(-50%);
+
+    background: white;
+}
+
+/* Tâche terminée */
+
+ul li.checked {
+    color: #888;
+}
+
+ul li.checked span:first-child {
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background: #7124a9;
+
+    content: '✓';
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* X pour supprimer */
+
+.delete {
+    position: absolute;
+
+    right: 8px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    color: #7124a9;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.delete:hover {
+    background: #edeef0;
+    color: #4e085f;
 }

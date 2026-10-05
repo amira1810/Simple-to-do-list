@@ -4,16 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do List</title>
+
+    <link rel="icon" href="images/todolist.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
+
         <div class="to-do-app">
-            <h2>To do List</h2> <img src="images/todolist.jpg" alt="">
+
+            <h2>
+                To do List
+                <img src="images/todolist.jpg" alt="To do list">
+            </h2>
+
+            <div class="row">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Add a new task"
+                >
+
+                <button id="addTaskButton">
+                    Add Task
+                </button>
+            </div>
+
+            <ul id="taskList">
+                <li>
+                    <span>Task 1</span>
+                    <span class="delete">×</span>
+                </li>
+
+                <li>
+                    <span>Task 2</span>
+                    <span class="delete">×</span>
+                </li>
+
+                <li>
+                    <span>Task 3</span>
+                    <span class="delete">×</span>
+                </li>
+            </ul>
+
         </div>
 
     </div>
-    
+
+    <script src="script.js"></script>
+
 </body>
 </html>
